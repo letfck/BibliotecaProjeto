@@ -37,11 +37,11 @@ public class CadastrarLivro extends javax.swing.JFrame {
         jScrollPane3 = new javax.swing.JScrollPane();
         jTextArea3 = new javax.swing.JTextArea();
         jLabel4 = new javax.swing.JLabel();
-        jButton2 = new javax.swing.JButton();
+        jCadastrar = new javax.swing.JButton();
         jScrollPane4 = new javax.swing.JScrollPane();
         jTextArea4 = new javax.swing.JTextArea();
         jLabel5 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        jCancelar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -66,8 +66,13 @@ public class CadastrarLivro extends javax.swing.JFrame {
 
         jLabel4.setText("editora:");
 
-        jButton2.setFont(new java.awt.Font("Liberation Sans", 1, 15)); // NOI18N
-        jButton2.setText("Cadastrar");
+        jCadastrar.setFont(new java.awt.Font("Liberation Sans", 1, 15)); // NOI18N
+        jCadastrar.setText("Cadastrar");
+        jCadastrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCadastrarActionPerformed(evt);
+            }
+        });
 
         jTextArea4.setColumns(20);
         jTextArea4.setRows(5);
@@ -75,8 +80,13 @@ public class CadastrarLivro extends javax.swing.JFrame {
 
         jLabel5.setText("descrição:");
 
-        jButton1.setFont(new java.awt.Font("Liberation Sans", 1, 15)); // NOI18N
-        jButton1.setText("Cancelar");
+        jCancelar.setFont(new java.awt.Font("Liberation Sans", 1, 15)); // NOI18N
+        jCancelar.setText("Cancelar");
+        jCancelar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCancelarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -104,9 +114,9 @@ public class CadastrarLivro extends javax.swing.JFrame {
                                         .addComponent(jScrollPane4))))))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(74, 74, 74)
-                        .addComponent(jButton2)
+                        .addComponent(jCadastrar)
                         .addGap(102, 102, 102)
-                        .addComponent(jButton1))
+                        .addComponent(jCancelar))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(189, 189, 189)
                         .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -137,12 +147,20 @@ public class CadastrarLivro extends javax.swing.JFrame {
                 .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton2)
-                    .addComponent(jButton1)))
+                    .addComponent(jCadastrar)
+                    .addComponent(jCancelar)))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCadastrarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jCadastrarActionPerformed
+
+    private void jCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCancelarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jCancelarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -180,8 +198,8 @@ public class CadastrarLivro extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jCadastrar;
+    private javax.swing.JButton jCancelar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

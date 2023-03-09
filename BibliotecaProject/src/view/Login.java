@@ -34,8 +34,8 @@ public class Login extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTextArea2 = new javax.swing.JTextArea();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        jEntrar = new javax.swing.JButton();
+        jCancelar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -62,11 +62,21 @@ public class Login extends javax.swing.JFrame {
         jTextArea2.setRows(5);
         jScrollPane2.setViewportView(jTextArea2);
 
-        jButton1.setFont(new java.awt.Font("Liberation Sans", 1, 15)); // NOI18N
-        jButton1.setText("Entrar");
+        jEntrar.setFont(new java.awt.Font("Liberation Sans", 1, 15)); // NOI18N
+        jEntrar.setText("Entrar");
+        jEntrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jEntrarActionPerformed(evt);
+            }
+        });
 
-        jButton2.setFont(new java.awt.Font("Liberation Sans", 1, 15)); // NOI18N
-        jButton2.setText("Cancelar");
+        jCancelar.setFont(new java.awt.Font("Liberation Sans", 1, 15)); // NOI18N
+        jCancelar.setText("Cancelar");
+        jCancelar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCancelarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -86,9 +96,9 @@ public class Login extends javax.swing.JFrame {
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(108, 108, 108)
-                        .addComponent(jButton1)
+                        .addComponent(jEntrar)
                         .addGap(55, 55, 55)
-                        .addComponent(jButton2)))
+                        .addComponent(jCancelar)))
                 .addContainerGap(92, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -106,8 +116,8 @@ public class Login extends javax.swing.JFrame {
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 61, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2))
+                    .addComponent(jEntrar)
+                    .addComponent(jCancelar))
                 .addGap(48, 48, 48))
         );
 
@@ -128,6 +138,14 @@ public class Login extends javax.swing.JFrame {
     private void jLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jLoginActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jLoginActionPerformed
+
+    private void jEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jEntrarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jEntrarActionPerformed
+
+    private void jCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCancelarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jCancelarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -165,8 +183,8 @@ public class Login extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jCancelar;
+    private javax.swing.JButton jEntrar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JTextField jLogin;
