@@ -12,6 +12,7 @@ public class Login {
     private String email;
     private String senha;
 
+            
     public String getEmail() {
         return email;
     }
