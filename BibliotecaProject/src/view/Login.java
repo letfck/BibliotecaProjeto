@@ -30,8 +30,8 @@ public class Login extends javax.swing.JFrame {
         jLogin = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jEntrar = new javax.swing.JButton();
-        jCancelar = new javax.swing.JButton();
+        Entrar = new javax.swing.JButton();
+        Cancelar = new javax.swing.JButton();
         jPasswordField1 = new javax.swing.JPasswordField();
         jScrollPane3 = new javax.swing.JScrollPane();
         jEditorPane1 = new javax.swing.JEditorPane();
@@ -53,19 +53,19 @@ public class Login extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Liberation Sans", 0, 14)); // NOI18N
         jLabel2.setText("senha:");
 
-        jEntrar.setFont(new java.awt.Font("Liberation Sans", 1, 15)); // NOI18N
-        jEntrar.setText("Entrar");
-        jEntrar.addActionListener(new java.awt.event.ActionListener() {
+        Entrar.setFont(new java.awt.Font("Liberation Sans", 1, 15)); // NOI18N
+        Entrar.setText("Entrar");
+        Entrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jEntrarActionPerformed(evt);
+                EntrarActionPerformed(evt);
             }
         });
 
-        jCancelar.setFont(new java.awt.Font("Liberation Sans", 1, 15)); // NOI18N
-        jCancelar.setText("Cancelar");
-        jCancelar.addActionListener(new java.awt.event.ActionListener() {
+        Cancelar.setFont(new java.awt.Font("Liberation Sans", 1, 15)); // NOI18N
+        Cancelar.setText("Cancelar");
+        Cancelar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCancelarActionPerformed(evt);
+                CancelarActionPerformed(evt);
             }
         });
 
@@ -89,9 +89,9 @@ public class Login extends javax.swing.JFrame {
                             .addComponent(jScrollPane3)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(108, 108, 108)
-                        .addComponent(jEntrar)
+                        .addComponent(Entrar)
                         .addGap(55, 55, 55)
-                        .addComponent(jCancelar)))
+                        .addComponent(Cancelar)))
                 .addContainerGap(92, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -109,8 +109,8 @@ public class Login extends javax.swing.JFrame {
                 .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 64, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jEntrar)
-                    .addComponent(jCancelar))
+                    .addComponent(Entrar)
+                    .addComponent(Cancelar))
                 .addGap(48, 48, 48))
         );
 
@@ -132,13 +132,13 @@ public class Login extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jLoginActionPerformed
 
-    private void jEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jEntrarActionPerformed
+    private void EntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EntrarActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jEntrarActionPerformed
+    }//GEN-LAST:event_EntrarActionPerformed
 
-    private void jCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCancelarActionPerformed
+    private void CancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CancelarActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jCancelarActionPerformed
+    }//GEN-LAST:event_CancelarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -176,9 +176,9 @@ public class Login extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jCancelar;
+    private javax.swing.JButton Cancelar;
+    private javax.swing.JButton Entrar;
     private javax.swing.JEditorPane jEditorPane1;
-    private javax.swing.JButton jEntrar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JTextField jLogin;

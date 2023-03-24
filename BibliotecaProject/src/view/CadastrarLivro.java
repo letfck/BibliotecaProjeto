@@ -36,12 +36,12 @@ public class CadastrarLivro extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jScrollPane3 = new javax.swing.JScrollPane();
         jTextArea3 = new javax.swing.JTextArea();
-        jCadastrar = new javax.swing.JButton();
+        CadastrarLivro = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
         jScrollPane4 = new javax.swing.JScrollPane();
         jTextArea4 = new javax.swing.JTextArea();
         jLabel5 = new javax.swing.JLabel();
-        jCancelar = new javax.swing.JButton();
+        Cancelar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -69,11 +69,11 @@ public class CadastrarLivro extends javax.swing.JFrame {
         jTextArea3.setRows(5);
         jScrollPane3.setViewportView(jTextArea3);
 
-        jCadastrar.setFont(new java.awt.Font("Liberation Sans", 1, 15)); // NOI18N
-        jCadastrar.setText("Cadastrar");
-        jCadastrar.addActionListener(new java.awt.event.ActionListener() {
+        CadastrarLivro.setFont(new java.awt.Font("Liberation Sans", 1, 15)); // NOI18N
+        CadastrarLivro.setText("Cadastrar");
+        CadastrarLivro.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCadastrarActionPerformed(evt);
+                CadastrarLivroActionPerformed(evt);
             }
         });
 
@@ -85,11 +85,11 @@ public class CadastrarLivro extends javax.swing.JFrame {
 
         jLabel5.setText("descrição:");
 
-        jCancelar.setFont(new java.awt.Font("Liberation Sans", 1, 15)); // NOI18N
-        jCancelar.setText("Cancelar");
-        jCancelar.addActionListener(new java.awt.event.ActionListener() {
+        Cancelar.setFont(new java.awt.Font("Liberation Sans", 1, 15)); // NOI18N
+        Cancelar.setText("Cancelar");
+        Cancelar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCancelarActionPerformed(evt);
+                CancelarActionPerformed(evt);
             }
         });
 
@@ -119,9 +119,9 @@ public class CadastrarLivro extends javax.swing.JFrame {
                                         .addComponent(jScrollPane4))))))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(74, 74, 74)
-                        .addComponent(jCadastrar)
+                        .addComponent(CadastrarLivro)
                         .addGap(102, 102, 102)
-                        .addComponent(jCancelar))
+                        .addComponent(Cancelar))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(198, 198, 198)
                         .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -152,21 +152,21 @@ public class CadastrarLivro extends javax.swing.JFrame {
                 .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 37, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jCadastrar)
-                    .addComponent(jCancelar)))
+                    .addComponent(CadastrarLivro)
+                    .addComponent(Cancelar)))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCadastrarActionPerformed
+    private void CadastrarLivroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CadastrarLivroActionPerformed
      
         // TODO add your handling code here:
-    }//GEN-LAST:event_jCadastrarActionPerformed
+    }//GEN-LAST:event_CadastrarLivroActionPerformed
 
-    private void jCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCancelarActionPerformed
+    private void CancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CancelarActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jCancelarActionPerformed
+    }//GEN-LAST:event_CancelarActionPerformed
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
         // TODO add your handling code here:
@@ -208,8 +208,8 @@ public class CadastrarLivro extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jCadastrar;
-    private javax.swing.JButton jCancelar;
+    private javax.swing.JButton CadastrarLivro;
+    private javax.swing.JButton Cancelar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

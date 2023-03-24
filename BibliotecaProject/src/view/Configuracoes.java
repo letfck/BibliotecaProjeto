@@ -27,44 +27,49 @@ public class Configuracoes extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        LivrosPegos = new javax.swing.JButton();
+        EmprestimosVencidos = new javax.swing.JButton();
+        QuantidadedeUses = new javax.swing.JButton();
+        Voltar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setFont(new java.awt.Font("Liberation Sans", 1, 20)); // NOI18N
         jLabel1.setText("Configurações:");
 
-        jButton1.setFont(new java.awt.Font("Liberation Sans", 1, 17)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(51, 51, 51));
-        jButton1.setText("Livros Pegos:");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        LivrosPegos.setFont(new java.awt.Font("Liberation Sans", 1, 17)); // NOI18N
+        LivrosPegos.setForeground(new java.awt.Color(51, 51, 51));
+        LivrosPegos.setText("Livros Pegos:");
+        LivrosPegos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                LivrosPegosActionPerformed(evt);
             }
         });
 
-        jButton2.setFont(new java.awt.Font("Liberation Sans", 1, 17)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(51, 51, 51));
-        jButton2.setText("Emprestimos Vencidos:");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        EmprestimosVencidos.setFont(new java.awt.Font("Liberation Sans", 1, 17)); // NOI18N
+        EmprestimosVencidos.setForeground(new java.awt.Color(51, 51, 51));
+        EmprestimosVencidos.setText("Emprestimos Vencidos:");
+        EmprestimosVencidos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                EmprestimosVencidosActionPerformed(evt);
             }
         });
 
-        jButton3.setFont(new java.awt.Font("Liberation Sans", 1, 17)); // NOI18N
-        jButton3.setForeground(new java.awt.Color(51, 51, 51));
-        jButton3.setText("Quantidade de Usuários Cadastrados:");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        QuantidadedeUses.setFont(new java.awt.Font("Liberation Sans", 1, 17)); // NOI18N
+        QuantidadedeUses.setForeground(new java.awt.Color(51, 51, 51));
+        QuantidadedeUses.setText("Quantidade de Usuários Cadastrados:");
+        QuantidadedeUses.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                QuantidadedeUsesActionPerformed(evt);
             }
         });
 
-        jButton4.setText("Voltar");
+        Voltar.setText("Voltar");
+        Voltar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                VoltarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -74,50 +79,54 @@ public class Configuracoes extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(83, 83, 83)
-                        .addComponent(jButton2))
+                        .addComponent(EmprestimosVencidos))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(14, 14, 14)
-                        .addComponent(jButton4))
+                        .addComponent(Voltar))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(31, 31, 31)
-                        .addComponent(jButton3))
+                        .addComponent(QuantidadedeUses))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(111, 111, 111)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jLabel1)
-                            .addComponent(jButton1))))
+                            .addComponent(LivrosPegos))))
                 .addContainerGap(34, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(15, 15, 15)
-                .addComponent(jButton4)
+                .addComponent(Voltar)
                 .addGap(33, 33, 33)
                 .addComponent(jLabel1)
                 .addGap(47, 47, 47)
-                .addComponent(jButton1)
+                .addComponent(LivrosPegos)
                 .addGap(37, 37, 37)
-                .addComponent(jButton2)
+                .addComponent(EmprestimosVencidos)
                 .addGap(32, 32, 32)
-                .addComponent(jButton3)
+                .addComponent(QuantidadedeUses)
                 .addContainerGap(69, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void LivrosPegosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LivrosPegosActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_LivrosPegosActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void EmprestimosVencidosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EmprestimosVencidosActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_EmprestimosVencidosActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void QuantidadedeUsesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QuantidadedeUsesActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_QuantidadedeUsesActionPerformed
+
+    private void VoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VoltarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_VoltarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -155,10 +164,10 @@ public class Configuracoes extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
+    private javax.swing.JButton EmprestimosVencidos;
+    private javax.swing.JButton LivrosPegos;
+    private javax.swing.JButton QuantidadedeUses;
+    private javax.swing.JButton Voltar;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }

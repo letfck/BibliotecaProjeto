@@ -29,9 +29,9 @@ public class TodososLivros extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
         jVoltar = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        ApagarLivro = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        jButton3 = new javax.swing.JButton();
+        AdicionarLivro = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -66,17 +66,22 @@ public class TodososLivros extends javax.swing.JFrame {
             }
         });
 
-        jButton2.setFont(new java.awt.Font("Liberation Sans", 1, 15)); // NOI18N
-        jButton2.setText("Apagar Livro");
+        ApagarLivro.setFont(new java.awt.Font("Liberation Sans", 1, 15)); // NOI18N
+        ApagarLivro.setText("Apagar Livro");
+        ApagarLivro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ApagarLivroActionPerformed(evt);
+            }
+        });
 
         jLabel1.setFont(new java.awt.Font("Liberation Sans", 1, 17)); // NOI18N
         jLabel1.setText("Todos os Gêneros de Livros");
 
-        jButton3.setFont(new java.awt.Font("Liberation Sans", 1, 15)); // NOI18N
-        jButton3.setText("Adicionar Livro");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        AdicionarLivro.setFont(new java.awt.Font("Liberation Sans", 1, 15)); // NOI18N
+        AdicionarLivro.setText("Adicionar Livro");
+        AdicionarLivro.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                AdicionarLivroActionPerformed(evt);
             }
         });
 
@@ -88,9 +93,9 @@ public class TodososLivros extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(55, 55, 55)
-                        .addComponent(jButton2)
+                        .addComponent(ApagarLivro)
                         .addGap(34, 34, 34)
-                        .addComponent(jButton3))
+                        .addComponent(AdicionarLivro))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(18, 18, 18)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 359, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -113,21 +118,25 @@ public class TodososLivros extends javax.swing.JFrame {
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 274, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton3)
-                    .addComponent(jButton2))
+                    .addComponent(AdicionarLivro)
+                    .addComponent(ApagarLivro))
                 .addGap(11, 11, 11))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void AdicionarLivroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AdicionarLivroActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_AdicionarLivroActionPerformed
 
     private void jVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jVoltarActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jVoltarActionPerformed
+
+    private void ApagarLivroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ApagarLivroActionPerformed
+    int exit;
+    }//GEN-LAST:event_ApagarLivroActionPerformed
 
     /**
      * @param args the command line arguments
@@ -168,8 +177,8 @@ public class TodososLivros extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
+    private javax.swing.JButton AdicionarLivro;
+    private javax.swing.JButton ApagarLivro;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
