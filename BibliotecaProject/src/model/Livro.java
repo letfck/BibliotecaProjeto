@@ -9,6 +9,7 @@ package model;
  * @author aluno-16
  */
 public class Livro {
+    private int id;
     private String titulo;
     private String autor;
     private String editora;
