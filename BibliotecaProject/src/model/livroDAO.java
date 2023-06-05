@@ -1,3 +1,12 @@
+ package model;
+
+
+
+import config.ConnectionFactory;
+import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
+import model.livro;
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -8,6 +17,9 @@
  * @author aluno-16
  */
 public class livroDAO {
+
+    private List<livro> livro;
+    private Object livros;
 	
 	public void create (livro l) {
 		
@@ -25,7 +37,7 @@ public class livroDAO {
 			stmt.setString(1, l.getTitulo());		
 			stmt.setString(2, l.getAutor());	
 			stmt.setString(3, l.getEditora());
-			stmt.setInt(4, l.getDescricao());
+			stmt.setString(4, l.getDescricao());
 			
 			stmt.executeUpdate();
 			
@@ -49,12 +61,12 @@ public class livroDAO {
 			
 			while(rs.next()) {
 				
-				livro l = new Livro();
+				livro l = new livro();
 				
 				l.setId(rs.getInt("Id"));
 				l.setTitulo(rs.getString("Titulo"));
 				l.setAutor(rs.getString("Autor"));
-				l.setEditora(rs.getInt("Editora"));
+				l.setEditora(rs.getString("Editora"));
 				l.setDescricao(rs.getString("Descricao"));
 				
 				livro.add(l);
@@ -65,54 +77,54 @@ public class livroDAO {
 		}finally {
 			ConnectionFactory.closeConnection(con, stmt, rs);	
 		}
-		return livro;
+                return livro;
 	}
 
-	public livro readById(int id) {
+	public livro readById(int Id) {
 		java.sql.Connection con = ConnectionFactory.getConnection();
 		PreparedStatement stmt = null;
 		ResultSet rs = null;
 		
-		Livro livros = new Livros();
+		livro livros = new livro();
 		
 		try {
 			stmt = con.prepareStatement("SELECT * FROM livro WHERE ID = ?");
-			stmt.setInt(1, id);
+			stmt.setInt(1, Id);
 			
 			
 			rs = stmt.executeQuery();
 				
 			while(rs.next()) {
-				livro.setId(rs.getInt("Id"));
-				livro.setName(rs.getString("Titulo"));
-				livro.setDistrict(rs.getString("Autor"));
-				livro.setPopulation(rs.getInt("Editora"));
-				livro.setCountryCode(rs.getString("Descricao"));
+				livros.setId(rs.getInt("Id"));
+				livros.setTitulo(rs.getString("Titulo"));
+				livros.setAutor(rs.getString("Autor"));
+				livros.setEditora(rs.getString("Editora"));
+				livros.setDescricao(rs.getString("Descricao"));
 			}
-			return livro;
+			return livros;
 		} catch (Exception e) {
-			throw new RuntimeException("Erro ao ler dado por ID no banco de dados!");
+			throw new RuntimeException("Erro ao ler dado por Id no banco de dados!");
 		}finally {
 			ConnectionFactory.closeConnection(con, stmt, rs);	
 		}
 		
 	}
         
-        public Livro update(Livro l) {
+        public livro update(livro l) {
             java.sql.Connection con = ConnectionFactory.getConnection();
             PreparedStatement stmt = null;
             ResultSet rs = null;
 
             try {
-                stmt = con.prepareStatement("UPDATE livro SET Titulo = ?, Autor = ?, Editora = ?, Descricao = ? WHERE ID = ?");
-                stmt.setString(1, livro.getTitulo());
-                stmt.setString(2, livro.getAutor());
-                stmt.setInt(3, livro.getEditora());
-                stmt.setString(4, livro.getDescricao());
-                stmt.setInt(5, livro.getId());
+                stmt = con.prepareStatement("UPDATE livro SET Titulo = ?, Autor = ?, Editora = ?, Descricao = ? WHERE Id = ?");
+                stmt.setString(1, l.getTitulo());
+                stmt.setString(2, l.getAutor());
+                stmt.setString(3, l.getEditora());
+                stmt.setString(4, l.getDescricao());
+                stmt.setInt(5, l.getId());
 
                 stmt.executeUpdate();
-                return livro;
+                return l;
             } catch (SQLException e) {
                 throw new RuntimeException("Erro ao atualizar livros no banco de dados!");
             } finally {
@@ -142,6 +154,4 @@ public class livroDAO {
                 ConnectionFactory.closeConnection(con, stmt, rs);
             }
         }
-
-}
 }

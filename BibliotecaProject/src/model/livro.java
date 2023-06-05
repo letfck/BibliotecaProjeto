@@ -9,11 +9,23 @@ package model;
  * @author aluno-16
  */
 public class livro {
-    private int id;
+
+    public static void add(livro l) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+    private int Id;
     private String titulo;
     private String autor;
     private String editora;
-    private String descriçao;
+    private String descricao;
+
+    public int getId() {
+        return Id;
+    }
+
+    public void setId(int Id) {
+        this.Id = Id;
+    }
 
     public String getTitulo() {
         return titulo;
@@ -39,13 +51,12 @@ public class livro {
         this.editora = editora;
     }
 
-    public String getDescriçao() {
-        return descriçao;
+    public String getDescricao() {
+        return descricao;
     }
 
-    public void setDescriçao(String descriçao) {
-        this.descriçao = descriçao;
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
     }
-
-    
 }
+    
