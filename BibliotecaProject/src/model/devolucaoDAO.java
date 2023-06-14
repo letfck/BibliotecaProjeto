@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package model;
 
 import config.ConnectionFactory;
@@ -11,29 +7,34 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+
 /**
  *
  * @author aluno-16
  */
-public class usuarioDAO {
+public class devolucaoDAO {
     
-    public void create (usuario l) {
+    public void create (devolucao l) {
 		
 		java.sql.Connection con= ConnectionFactory.getConnection();
 		PreparedStatement stmt = null;
 		
 		try {
-			stmt = con.prepareStatement("INSERT INTO usuario ("
-					+ "Usuarios, "			
-					+ "Sexo, "		
-					+ "Contato, "
-					+ "Nascimento) "
+			stmt = con.prepareStatement("INSERT INTO devolucao ("
+					+ "Nome, "			
+					+ "Livro, "		
+					+ "Dataquepegou, "
+					+ "Devolver) "
 					+ "VALUES (?,?,?,?)");
 			
-			stmt.setString(1, l.getUsuarios());		
-			stmt.setString(2, l.getSexo());	
-			stmt.setString(3, l.getContato());
-			stmt.setString(4, l.getNascimento());
+			stmt.setString(1, l.getNome());		
+			stmt.setString(2, l.getLivro());	
+			stmt.setString(3, l.getDataquepegou());
+			stmt.setString(4, l.getDevolver());
 			
 			stmt.executeUpdate();
 			
@@ -44,28 +45,28 @@ public class usuarioDAO {
 		}
 	}
 	
-	public List<usuario> readAll() {
+	public List<devolucao> readAll() {
 		java.sql.Connection con = ConnectionFactory.getConnection();
 		PreparedStatement stmt = null;
 		ResultSet rs = null;
 		
-		List<usuario> usuarios = new ArrayList<>();
+		List<devolucao> devolucoes = new ArrayList<>();
 		
 		try {
-			stmt = con.prepareStatement("SELECT * FROM usuario");
+			stmt = con.prepareStatement("SELECT * FROM devolucao");
 			rs = stmt.executeQuery();
 			
 			while(rs.next()) {
 				
-				usuario l = new usuario();
+				devolucao l = new devolucao();
 				
 				l.setId(rs.getInt("Id"));
-				l.setUsuarios(rs.getString("Usuario"));
-				l.setSexo(rs.getString("Sexo"));
-				l.setContato(rs.getString("Contato"));
-				l.setNascimento(rs.getString("Nascimento"));
+				l.setNome(rs.getString("Nome"));
+				l.setLivro(rs.getString("Livro"));
+				l.setDataquepegou(rs.getString("Dataquepegou"));
+				l.setDevolver(rs.getString("Devolver"));
 				
-				usuario.add(l);
+				devolucao.add(l);
 				
 			}
 		} catch (SQLException e) {
@@ -73,31 +74,31 @@ public class usuarioDAO {
 		}finally {
 			ConnectionFactory.closeConnection(con, stmt, rs);	
 		}
-                return usuarios;
+                return devolucoes;
 	}
 
-	public usuario readById(int Id) {
+	public devolucao readById(int Id) {
 		java.sql.Connection con = ConnectionFactory.getConnection();
 		PreparedStatement stmt = null;
 		ResultSet rs = null;
 		
-		usuario usuarios = new usuario();
+		devolucao devolucoes = new devolucao();
 		
 		try {
-			stmt = con.prepareStatement("SELECT * FROM usuario WHERE ID = ?");
+			stmt = con.prepareStatement("SELECT * FROM devolucao WHERE ID = ?");
 			stmt.setInt(1, Id);
 			
 			
 			rs = stmt.executeQuery();
 				
 			while(rs.next()) {
-				usuarios.setId(rs.getInt("Id"));
-				usuarios.setUsuarios(rs.getString("Usuario"));
-				usuarios.setSexo(rs.getString("Sexo"));
-				usuarios.setContato(rs.getString("Contato"));
-				usuarios.setNascimento(rs.getString("Nascimento"));
+				devolucoes.setId(rs.getInt("Id"));
+				devolucoes.setNome(rs.getString("Nome"));
+				devolucoes.setLivro(rs.getString("Livro"));
+				devolucoes.setDataquepegou(rs.getString("Dataquepegou"));
+				devolucoes.setDevolver(rs.getString("Devolver"));
 			}
-			return usuarios;
+			return devolucoes;
 		} catch (Exception e) {
 			throw new RuntimeException("Erro ao ler dado por Id no banco de dados!");
 		}finally {
@@ -106,23 +107,23 @@ public class usuarioDAO {
 		
 	}
         
-        public usuario update(usuario l) {
+        public devolucao update(devolucao l) {
             java.sql.Connection con = ConnectionFactory.getConnection();
             PreparedStatement stmt = null;
             ResultSet rs = null;
 
             try {
-                stmt = con.prepareStatement("UPDATE usuario SET Usuarios = ?, Sexo = ?, Contato = ?, Nascimento = ? WHERE Id = ?");
-                stmt.setString(1, l.getUsuarios());
-                stmt.setString(2, l.getSexo());
-                stmt.setString(3, l.getContato());
-                stmt.setString(4, l.getNascimento());
+                stmt = con.prepareStatement("UPDATE devolucao SET Nome = ?, Livro = ?, Dataquepegou = ?, Devolver = ? WHERE Id = ?");
+                stmt.setString(1, l.getNome());
+                stmt.setString(2, l.getLivro());
+                stmt.setString(3, l.getDataquepegou());
+                stmt.setString(4, l.getDevolver());
                 stmt.setInt(5, l.getId());
 
                 stmt.executeUpdate();
                 return l;
             } catch (SQLException e) {
-                throw new RuntimeException("Erro ao atualizar usuarios no banco de dados!");
+                throw new RuntimeException("Erro ao atualizar devolucoes no banco de dados!");
             } finally {
                 ConnectionFactory.closeConnection(con, stmt, rs);
             }
@@ -134,7 +135,7 @@ public class usuarioDAO {
             ResultSet rs = null;
 
             try {
-                stmt = con.prepareStatement("DELETE FROM usuario WHERE ID = ?");
+                stmt = con.prepareStatement("DELETE FROM devolucao WHERE ID = ?");
                 stmt.setInt(1, id);
 
                 int rowsAffected = stmt.executeUpdate();
@@ -145,10 +146,9 @@ public class usuarioDAO {
                     return false;
                 }
             } catch (SQLException e) {
-                throw new RuntimeException("Erro ao apagar usuario do banco de dados!");
+                throw new RuntimeException("Erro ao apagar devolucao do banco de dados!");
             } finally {
                 ConnectionFactory.closeConnection(con, stmt, rs);
             }
         }
 }
-
